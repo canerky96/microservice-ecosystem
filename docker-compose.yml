@@ -1,0 +1,6 @@
+version: '3'
+services:
+ discovery-service:
+  image: discovery-server-docker
+  ports:
+   - 5858:5858
