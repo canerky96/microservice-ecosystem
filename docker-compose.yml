@@ -1,20 +1,28 @@
 version: '3'
 services:
- discovery-service:
+ discovery-server:
   build:
    context: ./discovery-server
    dockerfile: Dockerfile
   image: discovery-server-docker
   ports:
    - 5858:5858
- config-service:
+ config-server:
   build:
    context: ./config-server
    dockerfile: Dockerfile
   image: config-server-docker
-  environment:
-   - DISCOVERY_SERVER=http://discovery-service:5858/eureka
   ports:
    - 5859:5859
   depends_on:
-   - discovery-service
+   - discovery-server
+ api-gateway:
+  build:
+   context: ./api-gateway
+   dockerfile: Dockerfile
+  image: api-gateway-docker
+  depends_on:
+  - discovery-server
+  - config-server
+  ports:
+   - 5860:5860
