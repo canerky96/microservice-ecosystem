@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="product-service" />
         <module name="config-server" />
         <module name="discovery-server" />
         <module name="api-gateway" />
@@ -15,6 +16,7 @@
       <module name="api-gateway" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="discovery-server" target="1.8" />
+      <module name="product-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -22,6 +24,7 @@
       <module name="api-gateway" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
+      <module name="product-service" options="-parameters" />
     </option>
   </component>
 </project>
