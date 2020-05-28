@@ -10,11 +10,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 public class ShoppingCartServiceApplication {
 
-  @Bean
-  RestTemplate restTemplate{
-    return new RestTemplate();
-  }
-
   public static void main(String[] args) {
     SpringApplication.run(ShoppingCartServiceApplication.class, args);
   }

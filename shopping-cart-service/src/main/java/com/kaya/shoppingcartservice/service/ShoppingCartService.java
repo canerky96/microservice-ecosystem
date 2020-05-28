@@ -36,14 +36,4 @@ public class ShoppingCartService {
     shoppingCart.setProducts(newProducts);
     return ResponseEntity.ok().body(shoppingCartRepository.save(shoppingCart));
   }
-
-  public ResponseEntity<Integer> getTotalShoppingCartPrice(Long shoppingCartId){
-      ShoppingCart shoppingCart =
-              shoppingCartRepository
-                      .findById(shoppingCartId)
-                      .orElseThrow(() -> new RuntimeException("Verilen id ile eşleşen bir sonuç bulunamadı"));
-      Integer
-      return null;
-  }
-
 }
