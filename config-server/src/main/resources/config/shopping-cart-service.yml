@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://localhost:5858/eureka"
+spring:
+  datasource:
+    url: "jdbc:h2:mem:shopping_cart_service_db"
+    driverClassName: "org.h2.Driver"
+    username: "sa"
+    password: "password"
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
+  h2:
+    console:
+      enabled: true
